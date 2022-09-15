@@ -1,0 +1,13 @@
+.fa,
+.fa:visited,
+.fa:link,.fa:active{
+    text-decoration: none;
+    color: #000000a3;
+    transition: color 0.3s;
+}
+.fa:not(:last-child){
+    margin-right: 2rem;
+}
+.fa:hover{
+    color: blue;
+}
