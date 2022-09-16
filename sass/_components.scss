@@ -2,7 +2,6 @@
 
 .section-about{
     padding: 6rem 4rem;
-    width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -11,8 +10,14 @@
 .section-portfolios{
     padding: 6rem 4rem;
     background-color: #f9fafb;
-    width: 100%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
+}
+
+.section-contact{
+    padding: 6rem 4rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }

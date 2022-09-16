@@ -9,6 +9,8 @@
 html{
     box-sizing: border-box;
     font-size: 62.5%;
+    scroll-behavior: smooth;
+
 
     @include respond(tab-land) { // width < 1300?
         font-size: 56.25%; //1 rem = 9px, 9/16 = 50%
@@ -45,4 +47,8 @@ body{
 }
 h1,p{
     display: inline-block;
+}
+a{
+    text-decoration: none;
+    color: #fff;
 }
