@@ -31,8 +31,8 @@ html{
         font-size: 31.25%; //1rem = 5, 5/16
     }
 
-    @include respond(phone) {
-    }
+    // @include respond(phone) {
+    // }
 }
 body{  
     font-family: 'Luckiest Guy', cursive;

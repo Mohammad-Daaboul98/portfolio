@@ -4,6 +4,13 @@
     background-color: #202020;
     height: 100vh;
 }
+@include respond(tab-port){
+    .header{
+        position: relative;
+        background-color: #202020;
+        height: 70vh;
+    }
+}
 
 .nav{
     padding: 0rem 4rem;
@@ -25,7 +32,12 @@
         }
    
     }
-
+    @include respond(tab-port){
+        &-items{
+            visibility: hidden;
+            opacity: 0;
+        }   
+    }
     &-items{
         width: 40%;
         &__list{
@@ -46,22 +58,22 @@
         &:visited,
         &:link,&:active{
             display: inline-block;
-            font-family: 'Roboto', sans-serif;
+            font-family: 'Russo One', sans-serif;
             font-size: 1.7rem;
             font-weight:600;
             color: #fff ;
             text-decoration: none;
-            transition: all .3s  cubic-bezier(0.83, 0, 0.17, 1); 
+            transition: all .4s ease-in-out; 
 
             cursor: pointer;
         }
     }
         &__link-visible{
-            transform: rotateY(0) translateZ(24px);
+            transform: rotateY(0);
 
         }
         &__link-invisible{
-            transform: rotateX(90deg)  translateZ(24px);
+            transform: rotateY(90deg);
             // color: red !important;
             position: absolute;
             top: 100%;
@@ -83,11 +95,18 @@
             top: 0;
             opacity: 1;
             visibility: visible;
-            transform: rotateX(0)  translateZ(-24px);
+            transform: rotateY(0);
         }
 
     }
 }
+
+@include respond(S-tab) {
+    .container-i{
+        display: none;
+    }
+}
+
 
 .box{
     padding: 0rem 4rem;
@@ -105,7 +124,7 @@
         justify-content: center;
         width: 50%;
         &__img{
-            width: 35%;
+            width: 50%;
         }
     }
 
@@ -126,6 +145,21 @@
             font-weight:lighter;
         }
     }
+}
+
+@include respond(B-phone){
+    .box{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 4rem;
+        &-right{
+            width: 60%;
+            &__img{
+                width: 70%;
+            }
+        }
+    }    
 }
 
 .frame{
@@ -166,13 +200,10 @@
 }
 
 
+
 .description{
+
     width: 50%;
-    &__header{
-        position: relative;
-        font-size: 4rem;
-        font-weight: 400;
-    }
     &__paragraph{
         font-family: 'Russo One', sans-serif;
         margin-top: 4rem;
@@ -181,26 +212,6 @@
         line-height: 3rem;
         text-align: justify;
     }
-    &__header::after{
-        content: '';
-        position: absolute;
-        top: 110%;
-        left: 5%;
-        border-bottom: 2px solid black;
-        background-color: #000;
-        width: 150%;
-        border-width: 100%;
-        }
-
-    &__header::before{
-            content: '';
-            position: absolute;
-            top: 107%;
-            left: 0;
-            border-bottom: 5px solid black;
-            background-color: #000;
-            width: 30%;
-        }
 
         &__links{
             width: 100%;
@@ -210,6 +221,50 @@
         }
 }
 
+.frame,.description{
+    margin-top: 10rem;
+}
+
+@include respond(B-phone){
+    .description{
+        width: 90%;
+        &__paragraph{
+            font-family: 'Russo One', sans-serif;
+            margin-top: 4rem;
+            font-size: 2.5rem;
+            color: #000000a3;
+            line-height: 4rem;
+        }
+        &__links{
+            width: 100%;
+            margin-top: 2.5rem;
+            display: flex;
+            align-items: center;
+            font-size: 2.5rem;
+        }
+           
+    }
+    .frame{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        &__card{
+            position: relative;
+            background-color: #fff;
+            box-shadow: none;
+            width: 80%;
+            height: 100%;
+            border-radius: 10px;
+            object-fit: cover;
+            &::before{
+                width: 0;
+            }
+        }
+    }
+}
+
+
+
 .portfolios-box{
     width: 90%;
     display: flex;
@@ -217,6 +272,7 @@
     flex-wrap: wrap;
     gap: 2rem;
     margin-top: 10rem;
+
     
     &__🕸{
         width: 40.5rem;
@@ -266,23 +322,118 @@
     }
 
     &__item{
-        border: 1px solid #FFDE00;
         border-radius: 10px;
-        padding: .5rem 1rem;
-        width: 25%;
+        padding: .5rem .8rem;
+        width: 30%;
         text-align: center;
         transition: all .3 ease-out;
     }
-    &__item:hover{
-        background-image: linear-gradient(to right,#FFDE00 ,#eee);
-        color: #fff;
+    &__item{
+        &-i{
+            border: 1px solid #30cb82;
+            &:hover{
+                background-image: linear-gradient(to right,#30cb82 ,#eee);
+            }
+        }
+        &-ii{
+            border: 1px solid #8364e8;
+            &:hover{
+                background-image: linear-gradient(to right,#8364e8 ,#eee);
+            }
+        }
+        &-iii{
+            border: 1px solid #fdc144;
+            &:hover{
+                background-image: linear-gradient(to right,#fdc144 ,#eee);
+            }
+        }
+        &-iv{
+            border: 1px solid #f73064;
+            &:hover{
+                background-image: linear-gradient(to right,#f73064 ,#eee);
+            }
+        }
+        &-v{
+            border: 1px solid #f43063;
+            &:hover{
+                background-image: linear-gradient(to right,#f43063 ,#eee);
+            }
+        }
+        &-vi{
+            border: 1px solid #41a16d;
+            &:hover{
+                background-image: linear-gradient(to right,#41a16d ,#eee);
+            }
+        }
+        &-vii{
+            border: 1px solid #f5ba13;
+            &:hover{
+                background-image: linear-gradient(to right,#f5ba13 ,#eee);
+            }
+        }
+        &-viii{
+            border: 1px solid #3e6a82f4;
+            &:hover{
+                background-image: linear-gradient(to right,#3e6a82f4 ,#eee);
+            }
+        }
+        &-ix{
+            border: 1px solid #ff4c68;
+            &:hover{
+                background-image: linear-gradient(to right,#ff4c68 ,#eee);
+            }
+        }
+        &:hover{
+            color: #fff;
+        }
     }
 }
 
-    &__🕸:hover{
-        box-shadow: 0rem 2rem 2rem rgba(#FFDE00, 0.3);   
+    &__🕸-i:hover{
+        box-shadow: 0rem 2rem 2rem rgba(#30cb82, 0.3);   
+    }
+    &__🕸-ii:hover{
+        box-shadow: 0rem 2rem 2rem rgba(#8364e8, 0.3);   
+    }
+    &__🕸-iii:hover{
+        box-shadow: 0rem 2rem 2rem rgba(#fdc144, 0.3);   
+    }
+    &__🕸-iv:hover{
+        box-shadow: 0rem 2rem 2rem rgba(#f73064, 0.3);   
+    }
+    &__🕸-v:hover{
+        box-shadow: 0rem 2rem 2rem rgba(#f43063, 0.3);   
+    }
+    &__🕸-vi:hover{
+        box-shadow: 0rem 2rem 2rem rgba(#41a16d, 0.3);   
+    }
+    &__🕸-vii:hover{
+        box-shadow: 0rem 2rem 2rem rgba(#f5ba13, 0.3);   
+    }
+    &__🕸-viii:hover{
+        box-shadow: 0rem 2rem 2rem rgba(#3e6a82f4, 0.3);   
+    }
+    &__🕸-ix:hover{
+        box-shadow: 0rem 2rem 2rem rgba(#ff4c68, 0.3);   
     }
 }
+
+@include respond(tab-port){
+    
+    .portfolios-box{
+        justify-content: space-around ;
+    }
+}
+
+@include respond(B-phone){
+    .portfolios-box{
+        width: 100%;
+        justify-content: center;
+        gap: 2rem;
+        margin-top: 10rem;
+    }
+}
+
 
 .📧{
     height: 80vh;
@@ -294,11 +445,31 @@
      box-shadow: 0 1rem 2rem rgba(#000, 0.5);
      border-radius: 5px;
      &__form{
-        width: 50%;
+        width: 60%;
         height: 100%;
      }
 }
 
+@include respond(S-tab) {
+    .📧{
+        // width: 30% !important; 
+        height: 60vh ;
+
+    }
+}
+
+@include respond(B-phone){
+    .📧{
+        width: 90%;
+        height:60vh;
+        background-image: linear-gradient(107deg , rgba(27, 27, 27,.99) 0% , rgba(27, 27, 27,.99) 100%,
+         transparent 50%), url('../img/ricardo-gomez-angel-9AdeEdYB2yk-unsplash.jpg');
+         &__form{
+            width: 100%;
+            height: 85%;
+         }
+    }
+}
 .footer{
 
     background-color: #eee;
@@ -332,13 +503,40 @@
         &--face,&--in,&--git{
             width: 20%;
             transition: all .2s;
-            &:hover{
-                background-color: #000;
-                background-image:linear-gradient(to right,#000,#000);
-            }
+        }
+        &--face:hover{
+            background-color: #fff;
+            color: #3d5b94;
+        }
+        &--in:hover{
+            background-color: #fff;
+            color: #1e83ae;
+        }
+        &--git:hover{
+            background-image: linear-gradient(to right,#fff,#fff);
+            background-image: linear-gradient(to right, #283ec8, #8b10b9);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
         }
     }
 
 }
 
+
+@include respond(B-phone){
+    .footer{
+        margin-top: 2rem;
+        &__logo{
+            display: none;
+        }
+        &__social{
+            width: 100%;
+            &--face,&--in,&--git{
+                width: 33.333%;
+            }
+
+        }
+    }   
+}
     
