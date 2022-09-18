@@ -138,7 +138,15 @@ a {
 
 @media (max-width: 64.0625em) {
   .container-i {
-    display: none; } }
+    display: none; }
+  .nav {
+    height: 10%; } }
+
+@media (max-width: 43.75em) {
+  .nav {
+    padding: 2rem 1rem;
+    width: 100%;
+    height: 7%; } }
 
 .box {
   padding: 0rem 4rem;
@@ -372,7 +380,9 @@ a {
     width: 100%;
     justify-content: center;
     gap: 2rem;
-    margin-top: 10rem; } }
+    margin-top: 10rem; }
+    .portfolios-box__🕸 {
+      width: 80%; } }
 
 .📧 {
   height: 80vh;
@@ -393,7 +403,7 @@ a {
 @media (max-width: 43.75em) {
   .📧 {
     width: 90%;
-    height: 60vh;
+    height: 70vh;
     background-image: linear-gradient(107deg, rgba(27, 27, 27, 0.99) 0%, rgba(27, 27, 27, 0.99) 100%, transparent 50%), url("../img/ricardo-gomez-angel-9AdeEdYB2yk-unsplash.jpg"); }
     .📧__form {
       width: 100%;
@@ -487,7 +497,12 @@ a {
     justify-content: space-evenly;
     align-items: center; }
     .from__input {
-      width: 90%; } }
+      padding: 2rem 4rem;
+      width: 80%; }
+    .from__button {
+      width: 40%;
+      font-size: 2.5rem;
+      padding: 2rem 4rem; } }
 
 .fa,
 .fa:visited,
@@ -535,7 +550,7 @@ a {
   opacity: 0;
   visibility: hidden;
   display: none; }
-  @media (max-width: 73.125em) {
+  @media (max-width: 64.0625em) {
     .navigation {
       opacity: 1;
       visibility: visible;
@@ -599,6 +614,10 @@ a {
       .navigation__nav__link:visited, .navigation__nav__link:link {
         color: #fff;
         text-decoration: none; } }
+  @media (max-width: 43.75em) {
+    .navigation {
+      top: 8%;
+      left: 0; } }
   .navigation__checkbox:checked ~ .navigation__background {
     opacity: 1;
     visibility: visible;

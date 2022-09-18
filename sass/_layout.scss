@@ -12,6 +12,8 @@
     }
 }
 
+
+
 .nav{
     padding: 0rem 4rem;
     background-color: inherit;
@@ -105,6 +107,18 @@
     .container-i{
         display: none;
     }
+    .nav{
+        height: 10%;
+
+    }
+}
+
+@include respond(B-phone){
+.nav{
+    padding: 2rem 1rem;
+    width: 100%;
+    height: 7%;
+}
 }
 
 
@@ -431,7 +445,12 @@
         justify-content: center;
         gap: 2rem;
         margin-top: 10rem;
+
+        &__🕸{
+            width: 80%;
+        }
     }
+    
 }
 
 
@@ -461,7 +480,7 @@
 @include respond(B-phone){
     .📧{
         width: 90%;
-        height:60vh;
+        height:70vh;
         background-image: linear-gradient(107deg , rgba(27, 27, 27,.99) 0% , rgba(27, 27, 27,.99) 100%,
          transparent 50%), url('../img/ricardo-gomez-angel-9AdeEdYB2yk-unsplash.jpg');
          &__form{
