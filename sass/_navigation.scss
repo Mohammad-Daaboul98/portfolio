@@ -3,7 +3,7 @@
     visibility: hidden;
     display: none;
 
-    @include respond(S-tab){
+   @include respond(tab-port){
        opacity: 1;
        visibility: visible;
        display: unset;

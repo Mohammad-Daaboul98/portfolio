@@ -1,0 +1,22 @@
+@keyframes svg{
+    0%{
+        stroke-dasharray: 0 50%;
+    }
+    50%{
+        stroke-dasharray: 50% 0;
+    }
+
+}
+@keyframes footer-svg{
+    0%{
+        stroke-dasharray: 0 50%;
+        stroke: #3d5b94;
+        fill:#fff;
+
+    }
+    90%{
+        stroke-dasharray: 50% 0;
+        fill:#3d5b94;
+
+    }
+}
