@@ -110,6 +110,13 @@
     }
     .nav{
         height: 10%;
+        &-logo{
+            width: 40%;
+            &--svg{
+                width: 9rem;
+            }
+       
+        }
 
     }
 }
@@ -468,7 +475,7 @@
             &__link{
                 &--img{
                     width: 100%;
-                    height: 30rem;
+                    height: 35rem;
                 }
             }
         }
@@ -575,9 +582,14 @@
 
 @include respond(B-phone){
     .footer{
+        display: flex;
+        flex-wrap: wrap;
         margin-top: 2rem;
         &__logo{
-            display: none;
+            width: 100%;
+            &--svg{
+                width: 10rem;
+            }
         }
         &__social{
             width: 100%;
