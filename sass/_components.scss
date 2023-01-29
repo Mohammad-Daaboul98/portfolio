@@ -1,0 +1,39 @@
+@import 'mixins';
+
+.section-about{
+    padding: 6rem 4rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.section-portfolios{
+    padding: 6rem 4rem;
+    background-color: #f9fafb;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+.section-contact{
+    padding: 6rem 4rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+@include respond(S-tab) {
+    .section-about,.section-contact,.section-portfolios{
+        padding: 4rem 2rem;
+    }
+}
+
+@include respond(B-phone){
+    .section-about,.section-contact,.section-portfolios{
+        padding: 2rem 1rem;
+    }
+    // .section-contact{
+    //     height: 90vh;
+    // }
+}

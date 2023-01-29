@@ -1,0 +1,21 @@
+.container-i{
+    position: relative;
+    top: -1px;
+    &__svg{
+    fill: #202020;
+    transform: rotate(180deg);
+    }
+}
+
+.container-ii{
+    position: relative;
+    top: 3px;
+}
+
+.container-iii{
+    position: relative;
+    top: -1px;
+    &__svg{
+        transform: rotate(180deg);
+    }
+}

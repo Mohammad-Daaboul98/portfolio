@@ -1,0 +1,21 @@
+{
+  "name": "projectfull",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch:sass": "node-sass sass/main.scss css/style.css -w",
+    "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' css/style.css -o css/style.prefix.css",
+    "compress:css": "node-sass css/style.prefix.css css/style.css --output-style compressed"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "autoprefixer": "^10.4.11",
+    "jquery": "^3.6.0",
+    "node-sass": "^7.0.3",
+    "postcss": "^8.1.0",
+    "postcss-cli": "^9.1.0"
+  }
+}

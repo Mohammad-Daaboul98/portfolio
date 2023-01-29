@@ -1,0 +1,36 @@
+.title{
+    width: 95%;
+    margin-left: auto;
+    &__header{
+        position: relative;
+        font-size: 4rem;
+        font-weight: 400;
+
+        &::after{
+            content: '';
+            position: absolute;
+            top: 110%;
+            left: 5%;
+            border-bottom: 2px solid black;
+            background-color: #000;
+            width: 150%;
+            border-width: 100%;
+        }
+            &::before{
+                content: '';
+                position: absolute;
+                top: 107%;
+                left: 0;
+                border-bottom: 5px solid black;
+                background-color: #000;
+                width: 30%;
+            }
+        }
+    }
+
+    @include respond(B-phone){
+        .title{
+            width: 100%;
+            margin-left: 4rem;
+        }
+    }
