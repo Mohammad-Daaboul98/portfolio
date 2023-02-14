@@ -404,11 +404,12 @@
             &:hover{
                 background-image: linear-gradient(to right,#ff4c68 ,#eee);
             }
-            &-todo{
-                border: 1px solid #f1356d;
-                &:hover{
-                    background-image: linear-gradient(to right,#f1356d ,#eee);
-                }
+        }
+        &-todo{
+            border: 1px solid #f1356d;
+            &:hover{
+                background-image: linear-gradient(to right,#f1356d ,#eee);
+            }
         }
         &:hover{
             color: #fff;
@@ -616,4 +617,4 @@
         }
     }   
 }
-}
+    
